@@ -1,5 +1,9 @@
-
+import FirstContent from "./components/FirstContent";
 
 export default function Home() {
-  return <></>;
+  return (
+    <div>
+      <FirstContent />
+    </div>
+  );
 }

@@ -151,15 +151,24 @@ export default function Header() {
         <div className="text-white text-xl mt-6 mb-4">Menu</div>
         <ul className="space-y-4 ">
           <li>
+            <Link
+              href="/"
+              className={
+                pathname === "/"
+                  ? "text-yellow-500 font-semibold underline opacity-75"
+                  : "hover:text-yellow-500 ease-in-out duration-300 "
+              }
+            >
+              HOME
+            </Link>
+          </li>
+          <li>
             <a
               href="#"
               className="hover:text-yellow-500 ease-in-out duration-300"
             >
-              HOME
+              OUR PROCESS
             </a>
-          </li>
-          <li>
-            <p>OUR PROCESS</p>
           </li>
           <li>
             <div className="relative">
