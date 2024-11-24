@@ -4,6 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi"; // For the hamburger icon
 import { SlArrowDown } from "react-icons/sl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { IoCloseSharp } from "react-icons/io5";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,6 +18,8 @@ export default function Header() {
 
   function HandleCloseMenu() {
     setMenuOpen(false);
+    setProjMenuOpen(false);
+    setAboutMenuOpen(false);
   }
   function handleProjMenu() {
     setProjMenuOpen(!projMenuOpen);
@@ -142,13 +145,16 @@ export default function Header() {
       >
         <div className="absolute right-4 text-white text-3xl font-sans">
           <button onClick={HandleCloseMenu} className="hover:text-red-700">
-            X
+            <IoCloseSharp />
           </button>
         </div>
         <div className="text-white text-xl mt-6 mb-4">Menu</div>
         <ul className="space-y-4 ">
           <li>
-            <a href="#" className="hover:text-yellow-500 ">
+            <a
+              href="#"
+              className="hover:text-yellow-500 ease-in-out duration-300"
+            >
               HOME
             </a>
           </li>
@@ -156,19 +162,93 @@ export default function Header() {
             <p>OUR PROCESS</p>
           </li>
           <li>
-            <a href="#" className="hover:text-yellow-500 ">
-              ABOUT
-            </a>
+            <div className="relative">
+              <div
+                onClick={handleAboutMenu}
+                className={`flex items-center gap-1 cursor-pointer  ${
+                  aboutMenuOpen
+                    ? "text-yellow-500"
+                    : "hover:!text-yellow-500 text-black ease-in-out duration-300"
+                }`}
+              >
+                <span>ABOUT </span>
+                <span>
+                  <SlArrowDown />
+                </span>
+              </div>
+              <div
+                className={`${
+                  aboutMenuOpen ? "opacity-100 max-h-40" : "opacity-0 max-h-0"
+                } transition-all duration-500 ease-in-out overflow-hidden flex flex-col gap-2 items-center bg-slate-100 absolute w-52 shadow-lg mt-2 border border-black border-opacity-15 z-100`}
+              >
+                <div className="shadow-md w-52 text-center pb-1 hover:bg-slate-600 hover:text-slate-100 ease-in-out duration-200">
+                  <a href="#">OUR STORY</a>
+                </div>
+                <div className="shadow-md w-52 text-center pb-1 hover:bg-slate-600 hover:text-slate-100  ease-in-out duration-200">
+                  <a href="#">FAQ</a>
+                </div>
+                <div className="shadow-md w-52 text-center pb-1 hover:bg-slate-600 hover:text-slate-100  ease-in-out duration-200">
+                  <a href="#">SHOWROOM</a>
+                </div>
+                <div className="shadow-md w-52 text-center pb-1 hover:bg-slate-600 hover:text-slate-100  ease-in-out duration-200">
+                  <a href="#">CUSTOMER SERVICES</a>
+                </div>
+              </div>
+            </div>
           </li>
           <li>
-            <a href="#" className="hover:text-yellow-500 ">
-              OUR PROJECTS
-            </a>
+            <div
+              className={
+                aboutMenuOpen
+                  ? "transition-all ease-in-out duration-500 mt-40"
+                  : "transition-all ease-in-out duration-500 relative"
+              }
+            >
+              <div
+                onClick={handleProjMenu}
+                className={`flex items-center gap-1 cursor-pointer ${
+                  projMenuOpen
+                    ? "text-yellow-500"
+                    : "hover:text-yellow-500 ease-in-out duration-300"
+                }`}
+              >
+                <span>OUR PROJECTS </span>
+                <span>
+                  <SlArrowDown />
+                </span>
+              </div>
+              <div
+                className={`${
+                  projMenuOpen ? "opacity-100 max-h-40" : "opacity-0 max-h-0"
+                } transition-all duration-500 ease-in-out overflow-hidden flex flex-col gap-2 items-center bg-slate-100 absolute w-36 shadow-lg mt-2 border border-black border-opacity-15`}
+              >
+                <div className="shadow-md w-36 text-center hover:bg-slate-600 hover:text-slate-100 ease-in-out duration-200">
+                  <a href="#">KITCHEN</a>
+                </div>
+                <div className="shadow-md w-36 text-center hover:bg-slate-600 hover:text-slate-100  ease-in-out duration-200">
+                  <a href="#">CLOSETS</a>
+                </div>
+                <div className="shadow-md w-36 text-center hover:bg-slate-600 hover:text-slate-100  ease-in-out duration-200">
+                  <a href="#">OFFICE</a>
+                </div>
+              </div>
+            </div>
           </li>
           <li>
-            <a href="#" className="hover:text-yellow-500 ">
-              CONTACT US
-            </a>
+            <div
+              className={
+                projMenuOpen
+                  ? "mt-28 transition-all ease-in-out duration-500"
+                  : "transition-all ease-in-out duration-500"
+              }
+            >
+              <a
+                href="#"
+                className="hover:text-yellow-500 ease-in-out duration-300"
+              >
+                CONTACT US
+              </a>
+            </div>
           </li>
         </ul>
       </div>
