@@ -2,11 +2,15 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi"; // For the hamburger icon
 import { SlArrowDown } from "react-icons/sl";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [projMenuOpen, setProjMenuOpen] = useState(false);
   const [aboutMenuOpen, setAboutMenuOpen] = useState(false);
+
+  const pathname = usePathname();
 
   // Toggle the menu open/close
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -16,10 +20,12 @@ export default function Header() {
   }
   function handleProjMenu() {
     setProjMenuOpen(!projMenuOpen);
+    if (aboutMenuOpen) setAboutMenuOpen(false);
   }
 
   function handleAboutMenu() {
     setAboutMenuOpen(!aboutMenuOpen);
+    if (projMenuOpen) setProjMenuOpen(false);
   }
 
   return (
@@ -32,11 +38,23 @@ export default function Header() {
       <div className="hidden md:flex md:items-center md:justify-between md:w-full">
         <ul className="flex space-x-6 text-lg">
           <li>
-            <a
-              href="#"
-              className="hover:text-yellow-500 ease-in-out duration-300 "
+            <Link
+              href="/"
+              className={
+                pathname === "/"
+                  ? "text-yellow-500 font-semibold underline opacity-75"
+                  : "hover:text-yellow-500 ease-in-out duration-300 "
+              }
             >
               HOME
+            </Link>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="hover:text-yellow-500 ease-in-out duration-300"
+            >
+              OUR PROCESS
             </a>
           </li>
           <li>
@@ -52,7 +70,7 @@ export default function Header() {
             <div
               className={`${
                 aboutMenuOpen ? "opacity-100 max-h-40" : "opacity-0 max-h-0"
-              } transition-all duration-500 ease-in-out overflow-hidden flex flex-col gap-2 items-center bg-slate-100 absolute w-52 left-56 shadow-lg mt-2 border border-black border-opacity-15`}
+              } transition-all duration-500 ease-in-out overflow-hidden flex flex-col gap-2 items-center bg-slate-100 absolute w-52  left-96 shadow-lg mt-2 border border-black border-opacity-15`}
             >
               <div className="shadow-md w-52 text-center pb-1 hover:bg-slate-600 hover:text-slate-100 ease-in-out duration-200">
                 <a href="#">OUR STORY</a>
@@ -68,14 +86,7 @@ export default function Header() {
               </div>
             </div>
           </li>
-          <li>
-            <a
-              href="#"
-              className="hover:text-yellow-500 ease-in-out duration-300"
-            >
-              OUR PROCESS
-            </a>
-          </li>
+
           <li>
             <div
               onClick={handleProjMenu}
@@ -142,12 +153,12 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-yellow-500 ">
-              ABOUT US
-            </a>
+            <p>OUR PROCESS</p>
           </li>
           <li>
-            <p>OUR PROJECTS</p>
+            <a href="#" className="hover:text-yellow-500 ">
+              ABOUT
+            </a>
           </li>
           <li>
             <a href="#" className="hover:text-yellow-500 ">
