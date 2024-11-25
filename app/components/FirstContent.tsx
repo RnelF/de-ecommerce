@@ -64,14 +64,14 @@ export default function FirstContent() {
         {/*Socials*/}
 
         <div className="relative flex items-center justify-center mt-10 px-8">
-          <div className="w-[400px] h-[300px] overflow-hidden flex items-center justify-center">
+          <div className="w-[500px] h-[330px] overflow-hidden flex items-center justify-center">
             <Image
               src={images[currentIndex]}
               alt={`Slide ${currentIndex}`}
-              width={400}
-              height={300}
+              width={500}
+              height={350}
               objectFit="cover"
-              className="w-full h-full  rounded"
+              className="w-full h-full rounded-3xl"
             />
             <button
               onClick={prevSlide}
@@ -89,7 +89,7 @@ export default function FirstContent() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-6 mt-8">
+        <div className="flex flex-col justify-center items-center gap-6 mt-8 px-10">
           <div className="w-56">
             <h1 className="text-white text-5xl text-justify font-extrabold font-jost ">
               LUXURY MODERN KITCHEN DESIGN
@@ -109,7 +109,7 @@ export default function FirstContent() {
         </div>
       </div>
 
-      <div className="w-full h-full py-10 px-10 mb-40 text-white flex flex-col gap-10 justify-center items-center bg-black bg-opacity-90">
+      <div className="w-full h-full  py-10 pt-10 pb-20 text-white flex flex-col gap-10 justify-center items-center bg-black bg-opacity-90">
         <div className="w-64">
           <h1 className="font-jost text-3xl font-extrabold uppercase text-center">
             Lorem ipsum dolor sit amet
