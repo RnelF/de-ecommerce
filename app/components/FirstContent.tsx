@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function FirstContent() {
@@ -33,9 +33,17 @@ export default function FirstContent() {
     );
   }
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextSlide();
+    }, 7000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <div>
-      <div className="bg-black w-full h-full pb-10">
+      <div className="bg-black w-full h-full pb-10 ">
         {/*Socials*/}
         <div className="flex justify-center items-center">
           <div
@@ -82,8 +90,8 @@ export default function FirstContent() {
         </div>
 
         <div className="flex flex-col justify-center items-center gap-6 mt-8">
-          <div className="w-40">
-            <h1 className="text-white text-3xl text-center font-extrabold font-jost ">
+          <div className="w-56">
+            <h1 className="text-white text-5xl text-justify font-extrabold font-jost ">
               LUXURY MODERN KITCHEN DESIGN
             </h1>
           </div>
@@ -94,14 +102,41 @@ export default function FirstContent() {
             </p>
           </div>
           <div className="">
-            <button className="w-40 h-14 text-white text-lg border border-white hover:text-black hover:bg-white ">
+            <button className="w-40 h-14  text-white text-lg border border-white hover:text-black hover:bg-white ">
               <a href="#">CONTACT US</a>
             </button>
           </div>
         </div>
       </div>
 
-      <div className="mt-72"></div>
+      <div className="w-full h-full py-10 px-10 mb-40 text-white flex flex-col gap-10 justify-center items-center bg-black bg-opacity-90">
+        <div className="w-64">
+          <h1 className="font-jost text-3xl font-extrabold uppercase text-center">
+            Lorem ipsum dolor sit amet
+          </h1>
+        </div>
+
+        <div className="text-center font-jost text-md">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            porttitor tincidunt dictum. Etiam eget turpis elementum, varius
+            sapien sed, rutrum lorem. Nullam volutpat volutpat risus, sed
+            ultricies sapien fermentum et. Ut finibus et tortor vitae elementum.
+          </p>
+          <br />
+          <p>
+            Donec nec luctus turpis. Morbi egestas auctor pharetra. Nulla in est
+            enim. Ut id velit consequat, egestas ex eu, mattis lacus. In porta
+            non ante eget placerat. Suspendisse vitae luctus lectus. Phasellus
+            tincidunt non turpis vel aliquam.
+          </p>
+        </div>
+        <div>
+          <button className="w-44 h-14  text-white text-lg border border-white hover:text-black hover:bg-white ">
+            <a href="#">LEARN MORE</a>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
