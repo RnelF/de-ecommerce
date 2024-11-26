@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Slide-in animations */
+/* Slide-in animations for image slider gallery*/
 .slide-in-from-right {
   transform: translateX(100%);
   animation: slideInRight 0.5s forwards;
@@ -13,7 +13,7 @@
   animation: slideInLeft 0.5s forwards;
 }
 
-/* Slide-out animations */
+/* Slide-out animations for image slider gallery*/
 .slide-out-to-right {
   transform: translateX(100%);
   animation: slideOutRight 0.5s forwards;

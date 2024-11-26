@@ -81,9 +81,8 @@ export default function FirstContent() {
                 alt={`Slide ${prevIndex}`}
                 width={500}
                 height={350}
-                objectFit="cover"
                 key={`prev-${prevIndex}`}
-                className={`w-full px-2 h-full rounded-3xl absolute transition-all duration-500 ${
+                className={`object-cover w-full px-2 h-full rounded-3xl absolute transition-all duration-500 ${
                   animationClass === "slide-in-from-left"
                     ? "slide-out-to-right"
                     : "slide-out-to-left"
@@ -97,8 +96,7 @@ export default function FirstContent() {
               key={`current-${currentIndex}`}
               width={500}
               height={350}
-              objectFit="cover"
-              className={`w-full px-2 h-full rounded-3xl absolute transition-all duration-500 ${animationClass}`}
+              className={`object-cover w-full px-2 h-full rounded-3xl absolute transition-all duration-500 ${animationClass}`}
             />
             <button
               onClick={prevSlide}
