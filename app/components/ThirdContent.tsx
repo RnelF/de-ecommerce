@@ -15,10 +15,8 @@ export default function ThirdContent() {
           </p>
         </div>
         <div>
-          <button className="border text-xl border-white w-48 h-12">
-            <a href="#" className="uppercase text-white">
-              Our process
-            </a>
+          <button className="border text-xl uppercase text-white border-white w-48 h-12 hover:bg-white hover:text-black transition-all duration-300 ease-in-out font-semibold">
+            <a href="#">Our process</a>
           </button>
         </div>
       </div>
