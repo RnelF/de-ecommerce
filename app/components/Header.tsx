@@ -5,6 +5,7 @@ import { SlArrowDown } from "react-icons/sl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoCloseSharp } from "react-icons/io5";
+import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,7 +35,7 @@ export default function Header() {
   return (
     <div className="relative shadow-md flex justify-between gap-10 p-4">
       <div>
-        <img src="/logo/DE-logo.png" alt="Logo" width={180} height={90} />
+        <Image src="/logo/DE-logo.png" alt="Logo" width={180} height={90} />
       </div>
 
       {/* Desktop Menu (shows for screens 780px and above) */}

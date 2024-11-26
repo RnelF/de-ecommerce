@@ -48,7 +48,7 @@ export default function FirstContent() {
     }, 7000);
 
     return () => clearInterval(intervalId);
-  }, [currentIndex]);
+  }, [currentIndex, nextSlide]);
 
   return (
     <div>
