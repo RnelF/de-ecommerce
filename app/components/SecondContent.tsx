@@ -28,7 +28,7 @@ export default function SecondContent() {
         </p>
       </div>
 
-      <div className="w-[320px] h-[210px] overflow-hidden flex items-center justify-center mb-20 rounded-3xl ">
+      <div className="w-[320px] h-[210px] overflow-hidden flex items-center justify-center mb-6 rounded-3xl ">
         <Image
           src="/kitchen-pics/k11.jpg"
           alt="img"
