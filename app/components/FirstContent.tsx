@@ -52,7 +52,7 @@ export default function FirstContent() {
 
   return (
     <div>
-      <div className="bg-black md:bg-white w-full h-full md:h-1500 pb-10 md:flex ">
+      <div className="relative bg-black md:bg-white w-full h-full md:h-1500 pb-10 md:flex ">
         <div className="flex justify-center items-center ">
           {/*Socials*/}
           <div className="flex gap-5 justify-center items-center w-full md:w-12 h-14 md:h-1200 mx-8 rounded md:flex-col md:border-l-16 md:border-black md:pl-8 bg-[rgb(51,51,51)] md:bg-white">
@@ -69,10 +69,10 @@ export default function FirstContent() {
         </div>
         {/*Socials*/}
 
-        <div className="relative flex items-center justify-center mt-10 px-8">
+        <div className="md:relative flex items-center justify-center mt-10 px-8 md:z-10">
           <div
             className="w-[500px] h-[330px] overflow-hidden flex items-center justify-center relative rounded-3xl 
-          md:h-700 md:max-w-[700px]
+          md:h-700 md:min-w-[500px]
           "
           >
             {/* Previous Image */}
@@ -93,7 +93,7 @@ export default function FirstContent() {
             {/* Current Image */}
             <Image
               className={`object-cover w-full px-2 h-full rounded-3xl absolute transition-all duration-500 ${animationClass}
-              md:h-700 md:w-full
+              md:h-700 md:min-w-[500px]
             `}
               src={images[currentIndex]}
               alt={`Slide ${currentIndex}`}
@@ -117,7 +117,10 @@ export default function FirstContent() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-6 mt-8 px-10 md:bg-black">
+        <div
+          className="md:absolute flex flex-col justify-center items-center gap-6 mt-8 px-10 md:px-0
+        md:right-10 md:bg-black md:w-64 md:h-[1450px] md:overflow-hidden md:z-0"
+        >
           <div className="w-56">
             <h1 className="text-white text-5xl text-justify font-extrabold font-jost ">
               LUXURY MODERN KITCHEN DESIGN
@@ -137,7 +140,7 @@ export default function FirstContent() {
         </div>
       </div>
 
-      <div className="w-full h-full  py-10 pt-10 pb-20 text-white flex flex-col gap-10 justify-center items-center bg-black bg-opacity-90">
+      <div className="w-full h-full py-10 pt-10 pb-20 text-white flex flex-col gap-10 justify-center items-center bg-black bg-opacity-90">
         <div className="w-64">
           <h1 className="font-jost text-3xl font-extrabold uppercase text-center">
             Lorem ipsum dolor sit amet
