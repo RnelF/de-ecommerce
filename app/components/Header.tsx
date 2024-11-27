@@ -40,7 +40,7 @@ export default function Header() {
 
       {/* Desktop Menu (shows for screens 780px and above) */}
       <div className="hidden md:flex md:items-center md:justify-between md:w-full">
-        <ul className="flex space-x-6 text-lg">
+        <ul className="flex space-x-6 text-md">
           <li>
             <Link
               href="/"

@@ -14,6 +14,18 @@ export default {
       fontFamily: {
         jost: ["Jost", "sans-serif"],
       },
+      borderWidth: {
+        10: "10px",
+        12: "12px",
+        16: "16px",
+      },
+      height: {
+        500: "500px",
+        700: "700px",
+        900: "900px",
+        1200: "1200px",
+        1500: "1500px",
+      },
     },
   },
   plugins: [],
