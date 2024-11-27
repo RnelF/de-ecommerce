@@ -52,13 +52,13 @@ export default function FirstContent() {
 
   return (
     <div>
-      <div className="bg-black w-full h-full pb-10 ">
+      <div className="bg-black w-full h-full pb-10 xl:bg-white xl:flex xl:h-[80vh]">
         {/*Socials*/}
-        <div className="flex justify-center items-center">
-          <div
-            className="flex gap-5 justify-center items-center w-full h-14 mx-8 rounded"
-            style={{ backgroundColor: "rgb(51, 51, 51)" }}
-          >
+        <div
+          className="flex justify-center items-center
+         xl:bg-black xl:w- xl:pb-10 xl:h-[700px] xl:my-auto"
+        >
+          <div className="flex gap-5 justify-center items-center w-full h-14 mx-8 rounded bg-charcoal xl:bg-transparent xl:flex-col ">
             <div className="w-7 h-7 bg-white rounded flex justify-center items-center hover:bg-slate-500">
               <FaSquareFacebook className="w-6 h-6" />
             </div>
@@ -114,7 +114,7 @@ export default function FirstContent() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-6 mt-8 px-10">
+        <div className="flex flex-col justify-center items-center gap-6 mt-8 px-10 xl:bg-black">
           <div className="w-56">
             <h1 className="text-white text-5xl text-justify font-extrabold font-jost ">
               LUXURY MODERN KITCHEN DESIGN
