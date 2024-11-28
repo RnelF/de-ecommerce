@@ -52,13 +52,13 @@ export default function FirstContent() {
 
   return (
     <div>
-      <div className="bg-black w-full h-full pb-10 xl:bg-white xl:flex xl:h-[80vh]">
+      <div className="bg-black bg-opacity-90 w-full h-full pb-10 xl:bg-white xl:flex xl:h-[80vh]">
         {/*Socials*/}
         <div
           className="flex justify-center items-center
-         xl:bg-black xl:w- xl:pb-10 xl:h-[700px] xl:my-auto"
+         xl:bg-black xl:bg-opacity-90 xl:w- xl:pb-52 xl:h-[700px] xl:my-auto xl:ml-10 xl:items-end xl:w-[50px]"
         >
-          <div className="flex gap-5 justify-center items-center w-full h-14 mx-8 rounded bg-charcoal xl:bg-transparent xl:flex-col ">
+          <div className="flex gap-5 justify-center items-center w-full h-14 mx-8 rounded bg-charcoal xl:bg-transparent xl:flex-col xl:items-end">
             <div className="w-7 h-7 bg-white rounded flex justify-center items-center hover:bg-slate-500">
               <FaSquareFacebook className="w-6 h-6" />
             </div>
@@ -72,8 +72,8 @@ export default function FirstContent() {
         </div>
         {/*Socials*/}
 
-        <div className="relative flex items-center justify-center mt-10 px-8">
-          <div className="w-[500px] h-[330px] overflow-hidden flex items-center justify-center relative rounded-3xl">
+        <div className="relative flex items-center justify-center mt-10 px-8 xl:h-[700px] xl:my-auto xl:px-4">
+          <div className="w-[500px] h-[330px] overflow-hidden flex items-center justify-center relative rounded-3xl xl:w-[800px] xl:h-700">
             {/* Previous Image */}
             {prevIndex !== null && (
               <Image
