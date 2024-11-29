@@ -52,13 +52,13 @@ export default function FirstContent() {
 
   return (
     <div>
-      <div className="bg-black bg-opacity-90 w-full h-full pb-10 xl:bg-white xl:flex xl:h-[80vh] xl:relative xl:overflow-hidden ">
+      <div className="bg-black bg-opacity-90 w-full h-full pb-10 md:bg-white md:flex md:h-[80vh] md:relative md:overflow-hidden">
         {/*Socials*/}
         <div
           className="flex justify-center items-center
-         xl:bg-black xl:bg-opacity-90 xl:pb-52 xl:w-[50px] xl:h-[700px] xl:my-auto xl:ml-10 xl:items-end "
+      md:bg-black md:bg-opacity-90 md:pb-52 md:w-[50px] md:h-[700px] md:my-auto md:ml-10 md:items-end"
         >
-          <div className="flex gap-5 justify-center items-center w-full h-14 mx-8 rounded bg-charcoal xl:bg-transparent xl:flex-col xl:items-end">
+          <div className="flex gap-5 justify-center items-center w-full h-14 mx-8 rounded bg-charcoal md:bg-transparent md:flex-col md:items-end">
             <div className="w-7 h-7 bg-white rounded flex justify-center items-center hover:bg-slate-500">
               <FaSquareFacebook className="w-6 h-6" />
             </div>
@@ -72,8 +72,8 @@ export default function FirstContent() {
         </div>
         {/*Socials*/}
 
-        <div className="relative flex items-center justify-center mt-10 px-8 xl:h-[700px] xl:my-auto xl:px-4 xl:z-10 xl:pt-32">
-          <div className="w-[500px] h-[330px] overflow-hidden flex items-center justify-center relative rounded-3xl xl:w-[800px] xl:h-700">
+        <div className="relative flex items-center justify-center mt-10 px-8 md:h-[700px] md:my-auto md:px-4 md:z-10 md:pt-32">
+          <div className="w-[500px] h-[330px] overflow-hidden flex items-center justify-center relative rounded-3xl md:w-[800px] md:h-[700px]">
             {/* Previous Image */}
             {prevIndex !== null && (
               <Image
@@ -114,19 +114,19 @@ export default function FirstContent() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-6 mt-8 px-10 xl:absolute xl:bg-black xl:min-w-[500px] xl:max-w-full xl:h-full xl:overflow-hidden xl:right-0 xl:z-0">
+        <div className="flex flex-col justify-center items-center gap-6 mt-8 px-10 md:absolute md:bg-black md:min-w-[500px] md:max-w-full md:h-full md:overflow-hidden md:right-0 md:z-0">
           <div className="w-56">
-            <h1 className="text-white text-5xl text-justify font-extrabold font-jost ">
+            <h1 className="text-white text-5xl text-justify font-extrabold font-jost">
               LUXURY MODERN KITCHEN DESIGN
             </h1>
           </div>
           <div className="w-56">
-            <p className="capitalize text-white text-center font-jost ">
+            <p className="capitalize text-white text-center font-jost">
               High-End custom kitchen cabinets, closets, design, installation &
               more
             </p>
           </div>
-          <div className="">
+          <div>
             <button className="w-40 h-14 font-semibold text-white text-lg border border-white hover:text-black hover:bg-white transition-all duration-300 ease-in-out">
               <a href="#">CONTACT US</a>
             </button>
@@ -134,7 +134,7 @@ export default function FirstContent() {
         </div>
       </div>
 
-      <div className="w-full h-full  py-10 pt-10 pb-20 text-white flex flex-col gap-10 justify-center items-center bg-black bg-opacity-90">
+      <div className="w-full h-full py-10 pt-10 pb-20 text-white flex flex-col gap-10 justify-center items-center bg-black bg-opacity-90">
         <div className="w-64">
           <h1 className="font-jost text-3xl font-extrabold uppercase text-center">
             Lorem ipsum dolor sit amet
@@ -157,7 +157,7 @@ export default function FirstContent() {
           </p>
         </div>
         <div>
-          <button className="w-44 h-14  text-white text-lg font-semibold border border-white hover:text-black hover:bg-white transition-all duration-300 ease-in-out">
+          <button className="w-44 h-14 text-white text-lg font-semibold border border-white hover:text-black hover:bg-white transition-all duration-300 ease-in-out">
             <a href="#">LEARN MORE</a>
           </button>
         </div>
