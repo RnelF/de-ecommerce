@@ -52,13 +52,10 @@ export default function FirstContent() {
 
   return (
     <div>
-      <div className="bg-black bg-opacity-90 w-full h-full pb-10 md:bg-white md:flex md:h-[1200px] md:relative">
+      <div className="bg-black flex flex-col justify-center items-center bg-opacity-90 w-full h-full pb-10 ">
         {/*Socials*/}
-        <div
-          className="flex justify-center items-center
-         md:bg-black md:bg-opacity-90 md:pb-52 md:w-[50px] md:h-[700px] md:my-auto md:ml-10 md:items-end "
-        >
-          <div className="flex gap-5 justify-center items-center w-full h-14 mx-8 rounded bg-charcoal md:bg-transparent md:flex-col md:items-end">
+        <div className="flex justify-center items-center">
+          <div className="flex gap-5 justify-center items-center w-full h-14 mx-8 rounded bg-charcoal ">
             <div className="w-7 h-7 bg-white rounded flex justify-center items-center hover:bg-slate-500">
               <FaSquareFacebook className="w-6 h-6" />
             </div>
@@ -72,8 +69,8 @@ export default function FirstContent() {
         </div>
         {/*Socials*/}
 
-        <div className="relative flex items-center justify-center mt-10 px-8 md:h-[700px] md:my-auto md:px-4 z-10">
-          <div className="w-[500px] h-[330px] overflow-hidden flex items-center justify-center relative rounded-3xl md:w-[450px] md:max-w-[700] md:h-700">
+        <div className="relative flex items-center justify-center mt-10 px-8 ">
+          <div className="w-[500px] h-[330px] overflow-hidden flex items-center justify-center relative rounded-3xl ">
             {/* Previous Image */}
             {prevIndex !== null && (
               <Image
@@ -116,7 +113,7 @@ export default function FirstContent() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-6 mt-8 px-10 md:absolute md:bg-black md:max-w-[500px] md:h-full md:overflow-hidden md:right-0 z-0">
+        <div className="flex flex-col justify-center items-center gap-6 mt-8 px-10  ">
           <div className="w-56">
             <h1 className="text-white text-5xl text-justify font-extrabold font-jost ">
               LUXURY MODERN KITCHEN DESIGN
