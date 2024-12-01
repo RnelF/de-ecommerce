@@ -52,10 +52,10 @@ export default function FirstContent() {
 
   return (
     <div>
-      <div className="bg-black flex flex-col justify-center items-center bg-opacity-90 w-full h-full pb-10 ">
+      <div className="bg-black flex flex-col justify-center items-center bg-opacity-90 w-full h-full pb-10 md:flex-row md:bg-white md:h-1200 md:ml-20 md:p-0 md:w-full">
         {/*Socials*/}
-        <div className="flex justify-center items-center">
-          <div className="flex gap-5 justify-center items-center w-full h-14 mx-8 rounded bg-charcoal ">
+        <div className="flex justify-center items-center md:bg-black md:bg-opacity-90 md:h-4/5 md:w-10">
+          <div className="flex gap-5 justify-center items-center w-full h-14 mx-8 rounded bg-charcoal md:flex-col">
             <div className="w-7 h-7 bg-white rounded flex justify-center items-center hover:bg-slate-500">
               <FaSquareFacebook className="w-6 h-6" />
             </div>
@@ -69,8 +69,8 @@ export default function FirstContent() {
         </div>
         {/*Socials*/}
 
-        <div className="relative flex items-center justify-center mt-10 px-8 ">
-          <div className="w-[500px] h-[330px] overflow-hidden flex items-center justify-center relative rounded-3xl ">
+        <div className="relative flex items-center justify-center mt-10 px-8">
+          <div className="w-[500px] h-[330px] overflow-hidden flex items-center justify-center relative rounded-3xl md:w-[450px] md:h-[600px] md:overflow-hidden">
             {/* Previous Image */}
             {prevIndex !== null && (
               <Image
@@ -105,7 +105,7 @@ export default function FirstContent() {
 
             <button
               onClick={nextSlide}
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2"
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 "
               aria-label="Next Slide"
             >
               <MdNavigateNext />
@@ -113,7 +113,7 @@ export default function FirstContent() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-6 mt-8 px-10  ">
+        <div className="flex flex-col justify-center items-center gap-6 mt-8 px-10 md:bg-black md:h-full">
           <div className="w-56">
             <h1 className="text-white text-5xl text-justify font-extrabold font-jost ">
               LUXURY MODERN KITCHEN DESIGN
