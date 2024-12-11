@@ -69,7 +69,8 @@ export default function FirstContent() {
         </div>
         {/*Socials*/}
 
-        <div className="relative flex flex-col items-center justify-center mt-10 md:px-8 md:p-0 md:h-full w-full">
+        <div className=" relative flex flex-col items-center justify-center mt-10 md:px-8 md:p-0 md:h-full w-full">
+
           <div className="w-[380px] h-[290px] overflow-hidden flex items-center justify-center relative rounded-3xl md:w-[450px] md:h-[600px] md:z-10">
             {/* Previous Image */}
             {prevIndex !== null && (
@@ -113,29 +114,29 @@ export default function FirstContent() {
           </div>
 
           <div className="flex flex-col justify-center items-center gap-6 mt-8 md:px-10 md:bg-black md:h-full md:absolute md:right-0 md:z-0">
-          <div className="w-56">
-            <h1 className="text-white text-5xl text-justify font-extrabold font-jost  md:h-full">
-              LUXURY MODERN KITCHEN DESIGN
-            </h1>
+            <div className="w-56">
+              <h1 className="text-white text-5xl text-justify font-extrabold font-jost  md:h-full">
+                LUXURY MODERN KITCHEN DESIGN
+              </h1>
+            </div>
+            <div className="w-56">
+              <p className="capitalize text-white text-center font-jost ">
+                High-End custom kitchen cabinets, closets, design, installation &
+                more
+              </p>
+            </div>
+              <div className="">
+                <button className="w-40 h-14 font-semibold text-white text-lg border border-white hover:text-black hover:bg-white transition-all duration-300 ease-in-out">
+                  <a href="#">CONTACT US</a>
+                </button>
+              </div>
           </div>
-          <div className="w-56">
-            <p className="capitalize text-white text-center font-jost ">
-              High-End custom kitchen cabinets, closets, design, installation &
-              more
-            </p>
-          </div>
-          <div className="">
-            <button className="w-40 h-14 font-semibold text-white text-lg border border-white hover:text-black hover:bg-white transition-all duration-300 ease-in-out">
-              <a href="#">CONTACT US</a>
-            </button>
-          </div>
-        </div>
         </div>
 
         
       </div>
 
-      <div className="w-full h-full  py-10 pt-10 pb-20 text-white flex flex-col gap-10 justify-center items-center bg-black bg-opacity-90 ">
+      <div className="w-full h-full py-10 pt-10 pb-20 text-white flex flex-col gap-10 justify-center items-center bg-black bg-opacity-90">
         <div className="w-64">
           <h1 className="font-jost text-3xl font-extrabold uppercase text-center">
             Lorem ipsum dolor sit amet

@@ -11,7 +11,7 @@ export default function Footer() {
   const pathname = usePathname();
   return (
     <div>
-      <div className="bg-black bg-opacity-90 w-full h-80 flex flex-col justify-center items-center gap-3 pt-5 pb-8">
+      <div className="  bg-black bg-opacity-90 w-full h-80 flex flex-col justify-center items-center gap-3 pt-5 pb-8">
         <div>
           <h1 className="uppercase text-white text-center font-jost font-extrabold text-xl ">
             Mailing List
