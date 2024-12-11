@@ -33,7 +33,7 @@ export default function Header() {
   }
 
   return (
-    <div className="relative shadow-md flex justify-between gap-10 p-4">
+    <div className="relative shadow-md flex justify-between gap-10 p-4 min-w-[376px]">
       <div>
         <Image src="/logo/DE-logo.png" alt="Logo" width={180} height={90} />
       </div>

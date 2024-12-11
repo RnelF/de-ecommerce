@@ -69,8 +69,8 @@ export default function FirstContent() {
         </div>
         {/*Socials*/}
 
-        <div className="relative flex items-center justify-center mt-10 px-8 md:px-0 md:h-full md:w-full">
-          <div className="w-[500px] h-[330px] overflow-hidden flex items-center justify-center relative rounded-3xl md:w-[450px] md:h-[600px] md:overflow-hidden md:z-10">
+        <div className="relative flex flex-col items-center justify-center mt-10 md:px-8 md:p-0 md:h-full w-full">
+          <div className="w-[380px] h-[290px] overflow-hidden flex items-center justify-center relative rounded-3xl md:w-[450px] md:h-[600px] md:z-10">
             {/* Previous Image */}
             {prevIndex !== null && (
               <Image
@@ -79,7 +79,7 @@ export default function FirstContent() {
                 width={500}
                 height={350}
                 key={`prev-${prevIndex}`}
-                className={`object-cover w-full px-2 h-full rounded-3xl absolute transition-all duration-500 ${
+                className={`object-cover w-full h-full rounded-3xl absolute transition-all duration-500 ${
                   animationClass === "slide-in-from-left"
                     ? "slide-out-to-right"
                     : "slide-out-to-left"
@@ -93,7 +93,7 @@ export default function FirstContent() {
               key={`current-${currentIndex}`}
               width={500}
               height={350}
-              className={`object-cover w-full px-2 h-full rounded-3xl absolute transition-all duration-500 ${animationClass}`}
+              className={`object-cover w-full h-full px-2 rounded-3xl absolute transition-all duration-500 ${animationClass}`}
             />
             <button
               onClick={prevSlide}
@@ -112,7 +112,7 @@ export default function FirstContent() {
             </button>
           </div>
 
-          <div className="flex flex-col justify-center items-center gap-6 mt-8 px-10 md:bg-black md:h-full md:absolute md:right-0 md:z-0">
+          <div className="flex flex-col justify-center items-center gap-6 mt-8 md:px-10 md:bg-black md:h-full md:absolute md:right-0 md:z-0">
           <div className="w-56">
             <h1 className="text-white text-5xl text-justify font-extrabold font-jost  md:h-full">
               LUXURY MODERN KITCHEN DESIGN
